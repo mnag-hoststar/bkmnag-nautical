@@ -1,0 +1,33 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+
+<header class="bk-header">
+    <div class="wrapper clearfix">
+        <div class="companyheader clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </div>
+        {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+    </div>
+</header>
+
+<section>
+  {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Nullam Posuer","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+</section>
+
+<div class="main wrapper clearfix">
+ {{zone('main')|raw}}
+</div>  
+
+<footer class="bk-footer">
+    <div class="wrapper clearfix">
+        {{widget('content', 'footercolumn1content1', {"content":"<h4>CONTACT</h4>"})|raw}}              
+        {{widget('profile', 'footercolumn1profileEmail', { 'profileType':'email', 'email':'profile'})|raw}}
+        {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
+    </div>
+</footer>
+
+
+{% endblock %}

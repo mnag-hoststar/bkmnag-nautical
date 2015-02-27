@@ -1,0 +1,148 @@
+{
+	"name":"Nautical",
+	"thumbnail":"nautical.png",
+	"screenshot":"nautical.png",
+	"templateType":"standard",
+    "pageTypes": ["home"],
+    "tags": {
+    "en": ["minimal", "clean", "photography", "modern", "colorful", "colourful", "flexible", "open", "simple", "sans-serif", "travel"],
+    "es": ["minimalista", "limpio", "fotografico", "moderno", "colorido", "flexible", "abierto", "simple", "sans-serif", "viajes"],
+    "br": ["minimalista", "limpo", "fotografia", "moderno", "colorido", "flexível", "aberto", "simples", "sans-serif", "viagem"]
+    },
+	"colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#757880",
+            "color3":"#5badc4",
+            "color4":"#203b4c",
+            "color5":"#757880",
+            "color6":"#a9ccd9",
+            "color7":"#ebebeb"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#757880",
+            "color3":"#3c9cd9",
+            "color4":"#2f3a52",
+            "color5":"#787b83",
+            "color6":"#c2d0d9",
+            "color7":"#ebebeb"
+        },
+        "Swatch 3": {
+            "color1":"#f5f9f9",
+            "color2":"#7d7981",
+            "color3":"#54bbd1",
+            "color4":"#534650",
+            "color5":"#7d7981",
+            "color6":"#c2d0d9",
+            "color7":"#ebebeb"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#757880",
+            "color3":"#97b1cc",
+            "color4":"#3a3d41",
+            "color5":"#8a8e92",
+            "color6":"#a9bcd9",
+            "color7":"#ebebeb"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#757880",
+            "color3":"#0b73ba",
+            "color4":"#3a3d41",
+            "color5":"#8a8e92",
+            "color6":"#a9bcd9",
+            "color7":"#ebebeb"
+        }
+    },
+    "fontSwatch": {
+       "title": "Ubuntu",
+        "font1": {
+            "font-family": "\"Ubuntu\", Geneva, Tahoma, sans-serif",
+            "font-size": "36px",
+            "font-weight": "500",
+            "line-height": "42px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Ubuntu\", Geneva, Tahoma, sans-serif",
+            "font-size": "28px",
+            "font-weight": "500",
+            "line-height": "38px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Ubuntu\", Geneva, Tahoma, sans-serif",
+            "font-size": "22px",
+            "font-weight": "500",
+            "line-height": "34px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Ubuntu\", Geneva, Tahoma, sans-serif",
+            "font-size": "20px",
+            "font-weight": "500",
+            "line-height": "28px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Ubuntu\", Geneva, Tahoma, sans-serif",
+            "font-size": "14px",
+            "font-weight": "300",
+            "line-height": "22px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Ubuntu\", Geneva, Tahoma, sans-serif",
+            "font-size": "14px",
+            "font-weight": "300",
+            "line-height": "28px",
+            "color": "@color-swatch2",
+            "color-hover": "@color-swatch3",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
+        },
+        "font7": {
+            "font-family": "\"Ubuntu\", Geneva, Tahoma, sans-serif",
+            "font-size": "13px",
+            "font-weight": "500",
+            "line-height": "24px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "@color-swatch2"
+        },
+        "font8": {
+            "font-family": "\"Ubuntu\", Geneva, Tahoma, sans-serif",
+            "font-size": "42px",
+            "font-weight": "500",
+            "line-height": "36px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Ubuntu\", Geneva, Tahoma, sans-serif",
+            "font-size": "18px",
+            "font-weight": "300",
+            "line-height": "30px",
+            "color": "fade(@color-swatch1,70%)",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Ubuntu\", Geneva, Tahoma, sans-serif",
+            "font-size": "20px",
+            "font-weight": "500",
+            "line-height": "34px",
+            "color": "@color-swatch2",
+            "letter-spacing": "inherit"
+        }
+    }
+}
