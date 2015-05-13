@@ -38,14 +38,18 @@ blockquote {
 	margin: 20px 0 30px;
 	quotes: "\201C""\201D""\2018""\2019";
 	font-family:@font-swatch5-font-family;
-	font-size:bkscale(@font-swatch5-font-size,1.1);
+	font-size: @font-swatch5-font-size;
 	font-weight:@font-swatch5-font-weight;
 	line-height:@font-swatch5-line-height;
 	color:@font-swatch5-color;
 	padding: 10px 1em;
+	background-color: fade(@color-swatch3, 10%);
+	border-radius: 10px;
+	font-style: italic;
 }
 
 blockquote:before {
+    display: none;
 	font-family: @font-swatch4-font-family;
 	color:@color-swatch3;
 	content: open-quote;
@@ -56,6 +60,7 @@ blockquote:before {
 }
 
 blockquote:after {
+    display: none;
 	font-family: @font-swatch4-font-family;
 	color:@color-swatch3;
 	content: close-quote;
@@ -197,8 +202,10 @@ header {
 /* COMPANY NAME */
 
 .widget.companyname {
-	display: inline-block;
+	display: table-cell;
 	vertical-align: middle;
+	padding-left: 10px;
+	z-index: 1000;
 }
 
 .companyname a:hover {
@@ -224,10 +231,10 @@ header {
 /* LOGO */
 
 .widget.logo {
-	display: inline-block;
-	margin-right: 10px;
+	display: table-cell;
+	//margin-right: 10px;
 	vertical-align: middle;
-	width: 30px;
+	z-index: 1000;
 	.logo, img {
 		line-height: 0;
 	}
@@ -413,23 +420,28 @@ footer.bk-footer {
 }
 
 .widget.content span.expand {
-		font-family: @font-swatch3-font-family;
-		background-color: @color-swatch3;
-		color: @color-swatch1;
-		font-size: @font-swatch5-font-size;
-		padding: 4px 8px;
-		margin: 4px 0;
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 4px;
-		cursor: pointer;
-		display: inline-block;
+    font-family: @font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
+    font-weight:@font-swatch7-font-weight;
+	background-color: @font-swatch7-background-color;
+	color: @font-swatch7-color;
+    padding: 0px 15px 2px;
+    margin: 4px 0;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
 }
 
 .widget.content span.expand:hover,
 .widget.content span.expand:focus {
-		cursor: pointer;
-		background-color: darken(@color-swatch3,5%);
+    cursor: pointer;
+    background-color: darken(@font-swatch7-background-color,5%);
+}
+
+.expand .more, .expand .less {
+	color: @font-swatch7-color;
 }
 
 h5 {
@@ -679,6 +691,7 @@ hr.line {
 @twitterProfilePicSize: 98px;
 
 .widget.twitter {
+    margin: 20px 0;
 	ul.twitter {
 		border: 1px solid darken(@color-swatch1,10%);
 		border-radius: 4px;
@@ -1031,7 +1044,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
 
 .container-outer .li-profile-container {
 	padding: 0;
-	margin: 0;
+	margin: 20px 0;
 
 }
 
@@ -1051,6 +1064,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
 
 .widget.map {
 	border: 1px solid lighten(@color-swatch5,20%);
+	margin: 20px 0;
 }
 
 /* ===============================
@@ -1059,7 +1073,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
 
  .widget.signupform {
 		display: block;
-		margin-bottom: 20px;
+		margin: 20px 0;
 		background-color: @color-swatch1;
 }
 
@@ -1079,6 +1093,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
 	 =============================== */
 
 .widget.responsiveslideshow {
+    margin: 20px 0;
 		.slideshow-image-list,
 		.slideshow-widget {
 				min-height: 450px;
