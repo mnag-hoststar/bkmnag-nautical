@@ -1,7 +1,7 @@
 {
 	"name":"Nautical",
-	"thumbnail":"nautical.png",
-	"screenshot":"nautical.png",
+	"thumbnail":"thumbnail.png",
+	"screenshot":"nautical-screenshot.jpg",
 	"templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
