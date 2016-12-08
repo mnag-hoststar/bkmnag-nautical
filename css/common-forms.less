@@ -4,6 +4,7 @@
 // Buttons
 .widget.feature .feature-bgimg .content button,
 .contactform button.btn,
+.advancedcontactform button,
 .widget.button button,
 .widget .btn,
 .widget.profile form button,
@@ -70,7 +71,9 @@
 
 
 // Text Inputs
+input, textarea,
 .contactform input, .contactform textarea,
+.advancedcontactform input, .advancedcontactform textarea, 
 .widget.profile form fieldset input.email,
 .signupform fieldset input.email,
 .blogsearch input.blog-search-input,
@@ -110,7 +113,7 @@
 	}
 }
 
-.contactform textarea {
+.contactform textarea, .advancedcontactform textarea {
 	line-height: bkscale(@font-swatch7-line-height, 0.7);
 	min-height: 10em;
 	padding-top: 0.6em;
@@ -124,7 +127,9 @@
 }
 
 // Labels
+label,
 .contactform label,
+.advancedcontactform label,
 .signupform fieldset label,
 .blog-search-form label,
 .widget.ecomcheckout .delivery label,
@@ -145,6 +150,7 @@
 
 
 // Selects
+.advancedcontactform select,
 .widget.ecomproductslist .productlist-filter,
 .widget.ecomcheckout .delivery,
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation
