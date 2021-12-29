@@ -1,4 +1,5 @@
 // Basket
+
 .widget.ecombasket {
 	.ecombasket-pull {
 		width: auto;
@@ -262,6 +263,7 @@
 							-ms-flex-item-align: auto;
 							align-self: auto;
 						}
+
 						button {
 							-webkit-box-ordinal-group: 1;
 							-moz-box-ordinal-group: 1;
@@ -299,7 +301,14 @@
 			margin-bottom: 30px;
 			width: 30.9%;
 
+			@media @tablet {
+				width: 48.5%;
+				margin-right: 2%;
+			}
+
 			@media @mobile {
+				width: auto;
+				margin-right: 0;
 				margin-bottom: 16px;
 			}
 
@@ -311,20 +320,10 @@
 				}
 			}
 
-			@media @tablet {
-				&:nth-child(2n+1) {
+			&:nth-child(2n+1) {
+				@media @tablet {
 					margin-right: 0;
 				}
-			}
-
-			@media @tablet {
-				width: 48.5%;
-				margin-right: 2%;
-			}
-
-			@media @mobile {
-				width: auto;
-				margin-right: 0;
 			}
 
 			a {
