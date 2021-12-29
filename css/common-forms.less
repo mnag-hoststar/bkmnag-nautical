@@ -1,7 +1,7 @@
-// =============================================================================================
 // FORMS
 
 // Buttons
+
 .widget.feature .feature-bgimg .content button,
 .contactform button.btn,
 .advancedcontactform button,
@@ -19,14 +19,14 @@
 .widget.ecomcategorieslist ul li a,
 .blog-post-more-link a,
 .blog-list-footer .paginate-older,
-.widget.clicktocall a
- {
+.widget.clicktocall a {
 	padding: 0 15px;
 	display: inline-block;
 	cursor: pointer;
-	-webkit-user-select: none;  /* Chrome all / Safari all */
-	-moz-user-select: none;     /* Firefox all */
-	-ms-user-select: none;      /* IE 10+ */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	line-height: (@font-swatch7-font-size * 2.5);
 	border-radius: 20px;
 	font-family: @font-swatch7-font-family;
@@ -42,7 +42,7 @@
 	border: none;
 	-webkit-font-smoothing: subpixel-antialiased !important;
 
-	@media only screen and (max-width : 460px) {
+	@media @mobile {
 		padding: 0 1.2em;
 		font-size: bkscale(@font-swatch7-font-size, 0.75);
 		line-height: (@font-swatch7-font-size * 2);
@@ -50,27 +50,27 @@
 
 	&:hover {
 		background-color: darken(@font-swatch7-background-color,5%);
-	  cursor: pointer;
+		cursor: pointer;
 	}
 }
 
-
-
 // Image buttons
+
 .widget.paypalbuynow .widget.button.paypal,
 .widget.tweet a,
 .widget.dropbox button,
 .widget.clicktocall a {
 	padding-left: 50px;
 	background-position: 18px center;
+
 	&:hover {
 		padding-left: 50px;
 		background-position: 18px center;
 	}
 }
 
-
 // Text Inputs
+
 input, textarea,
 .contactform input, .contactform textarea,
 .advancedcontactform input, .advancedcontactform textarea, 
@@ -89,23 +89,20 @@ input, textarea,
 	text-indent: 0;
 	height: (@font-swatch7-font-size * 2.5 + 1);
 	line-height: (@font-swatch7-font-size * 2.5 + 1);
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-	@media only screen and (max-width : 460px) {
+	font-family: @font-swatch5-font-family;
+	font-size: @font-swatch5-font-size;
+	color: @font-swatch5-color;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	@media @mobile {
 		font-size: bkscale(@font-swatch7-font-size, 0.75);
 		height: (@font-swatch7-font-size * 2);
 		line-height: (@font-swatch7-font-size * 2);
 	} 
 
-
-	&:hover {
-		
-	}
-
+	&:hover,
 	&:focus {
 		background-color: darken(@color-swatch1,3%);
 		color: darken(@font-swatch5-color, 20%);
@@ -119,7 +116,8 @@ input, textarea,
 	padding-top: 0.6em;
 	padding-bottom: 0.6em;
 	border-radius: 15px;
-	@media only screen and (max-width : 460px) {
+
+	@media @mobile {
 		line-height: bkscale(@font-swatch7-line-height, 0.5);
 		padding-top: 0.5em;
 		padding-bottom: 0.5em;
@@ -127,6 +125,7 @@ input, textarea,
 }
 
 // Labels
+
 .contactform label,
 .advancedcontactform label,
 .signupform fieldset label,
@@ -134,27 +133,27 @@ input, textarea,
 .widget.ecomcheckout .delivery label,
 .ecom-product-vartitle {
 	display: inline-block!important;
-    font-family:@font-swatch5-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight:@font-swatch5-font-weight;
-    line-height:@font-swatch5-line-height;
-    color: darken(@font-swatch5-color,10%);
-    letter-spacing: @font-swatch5-letter-spacing;
-    margin-bottom: 0.5em;
-    width: inherit;
-    @media only screen and (max-width : 460px) {
+	font-family:@font-swatch5-font-family;
+	font-size:@font-swatch5-font-size;
+	font-weight:@font-swatch5-font-weight;
+	line-height:@font-swatch5-line-height;
+	color: darken(@font-swatch5-color,10%);
+	letter-spacing: @font-swatch5-letter-spacing;
+	margin-bottom: 0.5em;
+	width: inherit;
+	
+	@media @mobile {
 		line-height: bkscale(@font-swatch4-line-height, 0.8);
 		font-size:bkscale(@font-swatch4-font-size, 0.8);
 	} 
 }
 
-
 // Selects
+
 .advancedcontactform,
 .widget.ecomproductslist .productlist-filter,
 .widget.ecomcheckout .delivery,
-.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation
-{
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation {
 	& select {
 		text-indent: 0.01px;
 		text-overflow: '';
@@ -174,10 +173,11 @@ input, textarea,
 		font-weight: @font-swatch7-font-weight;
 		height: (@font-swatch7-font-size * 2.5 );
 		line-height: 1;
-		webkit-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
-		@media only screen and (max-width : 460px) {
+
+		@media @mobile {
 			font-size: bkscale(@font-swatch7-font-size, 0.75);
 			height: (@font-swatch7-font-size * 2);
 		} 
@@ -189,35 +189,29 @@ input, textarea,
 		&:focus {
 			border-color: @color-swatch2;
 		}
-	}
-}
 
-// Hides *custom* dropdown arrow in Firefox 30 and above
-@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
-	.widget.ecomproductslist .productlist-filter,
-	.widget.ecomcheckout .delivery,
-	.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation {
 		& select {
-			background-image: none;
+			@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
+				background-image: none;
+			}
 		}
 	}
 }
 
-
 // Placeholders
+
 input::-webkit-input-placeholder {
    color: mix(@color-swatch5, @color-swatch2, 16%);
 }
 
-input:-moz-placeholder { /* Firefox 18- */
+input:-moz-placeholder {
    color: mix(@color-swatch5, @color-swatch2, 16%);
 }
 
-input::-moz-placeholder {  /* Firefox 19+ */
+input::-moz-placeholder {
    color: mix(@color-swatch5, @color-swatch2, 16%);
 }
 
 input:-ms-input-placeholder {  
    color: mix(@color-swatch5, @color-swatch2, 16%);
 }
-
