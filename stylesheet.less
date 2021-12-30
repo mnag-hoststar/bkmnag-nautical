@@ -1563,6 +1563,63 @@ footer.bk-footer {
 	}
 }
 
+// EMBEDS
+
+// Google Maps
+
+.widget[data-name="map"] .map {
+	background-color: @color__container--background;
+	width: auto;
+	max-width: none;
+
+	.style--light &,
+	.style--accent &,
+	.style--dark & {
+        background-color: transparent;
+    }
+}
+
+// YouTube
+
+.widget[data-name="youtube"] .youtube {
+	background-color: @color__container--background;
+	width: auto;
+	max-width: none;
+
+	.style--light &,
+	.style--accent &,
+	.style--dark & {
+        background-color: transparent;
+    }
+}
+
+// Embeds
+
+.widget.embed .embed-default,
+.widget .embed .embed-wrap {
+	background: transparent;
+	border: none;
+	padding: 0;
+	text-align: left;
+}
+
+.embed-content iframe,
+iframe[src*="vimeo"] {
+	max-width: 100%;
+}
+
+iframe {
+    border-radius: 5px;
+}
+
+div.embed-content p {
+	max-width: @layout-width-desktop;
+	margin: 0 auto;
+	margin-bottom: 2em;
+}
+
+// CLEARFIX
+
 .clearfix {
 	*zoom: 1;
 
