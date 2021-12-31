@@ -1011,7 +1011,7 @@ footer.bk-footer {
 		display: inline-block;
 		vertical-align: middle;
 		margin-right: 1em;
-		background: #fff;
+		background: transparent;
 		padding: 4px 3px 0 4px;
 		border-radius: 4px;
 	}
@@ -1222,7 +1222,7 @@ footer.bk-footer {
 		background-position: right center;
 		font-size: @font-swatch5-font-size;
 		color: @font-swatch5-color;
-		text-shadow: 0 1px 0 rgba(255,255,255,.5);
+		text-shadow: 0 1px 0 fade(@color-swatch1, 50%);
 		text-decoration: none;
 		cursor: pointer;
 
@@ -1489,7 +1489,7 @@ footer.bk-footer {
 		.btn-prev {
 			&:after {
 				content: "\2190";
-				color: #fff;
+				color: @color__button--text;
 				top: 7px;
 
 				@media @mobile {
@@ -1500,7 +1500,7 @@ footer.bk-footer {
 		.btn-next {
 			&:after {
 				content: "\2192";
-				color: #fff;
+				color: @color__button--text;
 				top: 7px;
 				
 				@media @mobile {
@@ -1536,7 +1536,7 @@ footer.bk-footer {
 			&:after {
 				letter-spacing: -4px;
 				font-size: 20px;
-				color: #fff;
+				color: @color__button--text;
 				top:-7px;
 			
 				@media @mobile {
