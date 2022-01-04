@@ -2,24 +2,33 @@
 
 // Buttons
 
-.widget.feature .feature-bgimg .content button,
-.contactform button.btn,
-.advancedcontactform button,
 .widget.button button,
-.widget .btn,
+.contactform button,
+.contactform button.btn,
+.signupform fieldset button,
+.signupform fieldset button.btn,
+.advancedcontactform button,
+.advancedcontactform button.btn,
 .widget.profile form button,
 .widget.paypalbuynow .widget.button.paypal,
-.widget.tweet a,
 .widget.dropbox button,
-.signupform fieldset button,
 .blog-search-submit-button,
+.blog-list-footer .paginate-older,
+.ecom-productslist-products .productlist-search .btn,
 .widget.ecomproduct .ecom-product .btn,
 .widget.ecomcheckout .checkout-order-button,
+.widget.ecombasket .ecombasket-pull,
 .widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
-.widget.ecomcategorieslist ul li a,
+.widget.ecombasketsummary .basket-summary-continue-shopping,
+.widget.ecombasketsummary .basket-summary-submit,
+.widget.feature .feature-bgimg .content button,
+.widget.tweet a,
+.widget.socialicons span a,
+.widget.clicktocall a,
 .blog-post-more-link a,
-.blog-list-footer .paginate-older,
-.widget.clicktocall a {
+.widget.ecomcategorieslist ul li a,
+.widget.yelpreview .review-body .review-link a,
+a.contentgroup__link {
 	padding: 0 15px;
 	display: inline-block;
 	cursor: pointer;
@@ -89,16 +98,21 @@
 
 // Text Inputs
 
-input, textarea,
-.contactform input, .contactform textarea,
-.advancedcontactform input, .advancedcontactform textarea, 
-.widget.profile form fieldset input.email,
+input,
+textarea,
+.contactform input,
+.contactform textarea,
+.signupform fieldset input,
 .signupform fieldset input.email,
+.advancedcontactform input,
+.advancedcontactform textarea,
+.widget.profile form fieldset input,
 .blogsearch input.blog-search-input,
+.productlist-filter .productlist-search input,
 .widget input[type="text"],
 .widget input[type="email"],
-.productlist-filter .productlist-search input,
-.signupform fieldset input {
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
 	background-color: darken(@color-swatch1,5%);
 	border: none;
 	border-radius: 20px;
