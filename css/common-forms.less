@@ -144,7 +144,8 @@ input:-webkit-autofill:focus {
 	}
 }
 
-.contactform textarea, .advancedcontactform textarea {
+.contactform textarea,
+.advancedcontactform textarea {
 	line-height: bkscale(@font-swatch7-line-height, 0.7);
 	min-height: 10em;
 	padding-top: 0.6em;
@@ -228,6 +229,11 @@ input:-webkit-autofill:focus {
 			@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
 				background-image: none;
 			}
+		}
+
+		option {
+			background-color: @color-swatch1;
+			color: @font-swatch5-color;
 		}
 	}
 }
