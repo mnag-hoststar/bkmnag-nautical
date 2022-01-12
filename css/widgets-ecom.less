@@ -176,11 +176,10 @@
 .widget.ecomproductslist .ecom-productslist-title,
 .widget.ecomfeaturedproducts .ecom-featuredproducts-title,
 .ecom-product-title {
-		font-size: bkscale(@font-swatch4-font-size, 1);
-		color: @color-swatch2;
-		border-bottom: 2px solid darken(@color-swatch1, 10%);
-		padding: 0.5em 0;
-	}
+	font-size: bkscale(@font-swatch4-font-size, 1);
+	color: @color-swatch2;
+	border-bottom: 2px solid darken(@color-swatch1, 10%);
+	padding: 0.5em 0;
 }
 
 .widget.ecomproductslist .ecom-productlist-price,
@@ -899,6 +898,19 @@
 					}
 				}
 			}
+		}
+	}
+
+	.basket-summary-continue-shopping,
+	.basket-summary-submit {
+		margin-left: 0;
+		margin-right: 10px;
+		margin-bottom: 10px;
+
+		@media @mobile {
+			margin-right: 0;
+			width: 100%;
+			text-align: center;
 		}
 	}
 }
