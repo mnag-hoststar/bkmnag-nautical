@@ -968,7 +968,24 @@ footer.bk-footer {
 // GALLERY
 
 .widget.gallery {
-	.inner {
+	ul li {
+		@media @tablet {
+			width: 50%;
+			padding-bottom: 50%;
+		}
+
+		@media @mobile {
+			width: 100%;
+			padding-bottom: 100%;
+		}
+
+		.responsivecolumns & {
+			width: 100%;
+			padding-bottom: 100%;
+		}
+	}
+
+	span.inner {
 		background-color: @color-swatch1;
 		border-radius: 5px;
 
