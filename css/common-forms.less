@@ -51,6 +51,22 @@ a.contentgroup__link {
 	}
 }
 
+.widget button.btn span {
+	color: @font-swatch7-color;
+
+	.style--light & {
+		color: @contrast--accent;
+	}
+
+	.style--accent & {
+		color: @contrast--dark;
+	}
+
+	.style--dark & {
+		color: @contrast--accent;
+	} 
+}
+
 // Image Buttons
 
 .widget.paypalbuynow .widget.button.paypal,
@@ -66,22 +82,7 @@ a.contentgroup__link {
 	}
 }
 
-// Button Span
-
-.widget button.btn span {
-	color: @font-swatch7-color;
-
-	.style--light & {
-		color: @contrast--accent;
 	}
-
-	.style--accent & {
-		color: @contrast--dark;
-	}
-
-	.style--dark & {
-		color: @contrast--accent;
-	} 
 }
 
 // Text Inputs
@@ -131,8 +132,7 @@ input:-webkit-autofill:focus {
 	}
 }
 
-.contactform textarea,
-.advancedcontactform textarea {
+textarea {
 	line-height: bkscale(@font-swatch7-line-height, 0.7);
 	min-height: 10em;
 	padding-top: 0.6em;
@@ -148,11 +148,10 @@ input:-webkit-autofill:focus {
 
 // Labels
 
-.contactform label,
-.advancedcontactform label,
-.signupform fieldset label,
-.blog-search-form label,
-.widget.ecomcheckout .delivery label,
+label,
+.label,
+.widget label,
+.widget .label,
 .ecom-product-vartitle {
 	display: inline-block!important;
 	font-family:@font-swatch5-font-family;
