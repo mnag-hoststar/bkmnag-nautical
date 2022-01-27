@@ -165,56 +165,62 @@ label,
 
 // Selects
 
-.advancedcontactform,
-.widget.ecomproductslist .productlist-filter,
-.widget.ecomcheckout .delivery,
-.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation {
-	& select {
-		text-indent: 0.01px;
-		text-overflow: '';
-		cursor: pointer;
-		position: relative;
-		background-repeat: no-repeat;
-		background-position: right center;
-		margin: 0;
-		border: 1px solid @color-swatch3;
+.select-wrap {
+	position: relative;
+	max-width: 50%;
+
+	@media @mobile {
+		max-width: 100%;
+	}
+
+	.responsivecolumns & {
+		max-width: 100%;
+	}
+}
+
+select {
+	text-indent: 0.01px;
+	text-overflow: '';
+	cursor: pointer;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: right center;
+	margin: 0;
+	border: 1px solid @color-swatch3;
+	background-color: @color-swatch1;
+	color: @color-swatch5;
+	border-radius: 5px;
+	position: relative;
+	display: inline-block;
+	font-family: @font-swatch7-font-family;
+	font-size: @font-swatch7-font-size;
+	font-weight: @font-swatch7-font-weight;
+	height: (@font-swatch7-font-size * 2.5 );
+	line-height: 1;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	@media @mobile {
+		font-size: bkscale(@font-swatch7-font-size, 0.75);
+		height: (@font-swatch7-font-size * 2);
+	} 
+
+	&:hover {
+		border-color: @color-swatch2;
+	}
+
+	&:focus {
+		border-color: @color-swatch2;
+	}
+
+	@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
+		background-image: none;
+	}
+
+	option {
 		background-color: @color-swatch1;
-		color: @color-swatch5;
-		border-radius: 5px;
-		position: relative;
-		display: inline-block;
-		font-family: @font-swatch7-font-family;
-		font-size: @font-swatch7-font-size;
-		font-weight: @font-swatch7-font-weight;
-		height: (@font-swatch7-font-size * 2.5 );
-		line-height: 1;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-
-		@media @mobile {
-			font-size: bkscale(@font-swatch7-font-size, 0.75);
-			height: (@font-swatch7-font-size * 2);
-		} 
-
-		&:hover {
-			border-color: @color-swatch2;
-		}
-
-		&:focus {
-			border-color: @color-swatch2;
-		}
-
-		& select {
-			@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
-				background-image: none;
-			}
-		}
-
-		option {
-			background-color: @color-swatch1;
-			color: @font-swatch5-color;
-		}
+		color: @font-swatch5-color;
 	}
 }
 
