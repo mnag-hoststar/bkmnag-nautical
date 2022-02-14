@@ -1,10 +1,10 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
 
-@import "@{templateLocal}/css/common-forms.less";
-@import "@{templateLocal}/css/common-text.less";
-@import "@{templateLocal}/css/widgets-blog.less";
-@import "@{templateLocal}/css/widgets-menu.less";
-@import "@{templateLocal}/css/widgets-ecom.less";
+@import "@{templateLocal}/less/common-forms.less";
+@import "@{templateLocal}/less/common-text.less";
+@import "@{templateLocal}/less/widgets-blog.less";
+@import "@{templateLocal}/less/widgets-menu.less";
+@import "@{templateLocal}/less/widgets-ecom.less";
 
 @desktop: ~"only screen and (min-width: 769px)";
 @mobile: ~"only screen and (min-width: 480px)";
@@ -607,7 +607,15 @@ footer.bk-footer {
 
 	a.pull {
 		@media @tablet {
+			content: '';
+			position: absolute;
 			top: 0;
+			left: 0;
+			width: 40px;
+			height: 2px;
+			margin: 0px auto;
+			background: @color-swatch1;
+			box-shadow: 0 8px 0 @color-swatch1, 0 16px 0 @color-swatch1;
 		}
 	}
 
@@ -1287,41 +1295,6 @@ footer.bk-footer {
 	}
 }
 
-// REDIRECT
-
-.widget.redirecttodesktop {
-	padding: 8px 0;
-
-	a {
-		padding-right: 30px;
-		padding-top: 2px;
-		background-image: image('/images/desktop.png');
-		background-repeat: no-repeat;
-		background-position: right center;
-		font-size: @font-swatch5-font-size;
-		color: @font-swatch5-color;
-		text-shadow: 0 1px 0 fade(@color-swatch1, 50%);
-		text-decoration: none;
-		cursor: pointer;
-
-		&:hover {
-			cursor: pointer;
-			background-image: image('/images/desktop.png');
-			background-repeat: no-repeat;
-			background-position: right center;
-			text-decoration: underline;
-		}
-	}
-}
-
-.desktop a:active {
-	cursor: pointer;
-	background-image: image('/images/desktop.png');
-	background-repeat: no-repeat;
-	background-position: right center;
-	text-decoration: underline;
-}
-
 // TWEET THIS
 
 .widget.tweet {
@@ -1329,80 +1302,6 @@ footer.bk-footer {
 		margin: 0 0 10px;
 		padding: 14px 0;
 		border: none;
-	}
-
-	a {
-		background-image: image('/images/social/socialicons-twitter.png');
-	}
-}
-
-// SOCIAL BAR WIDGET / SOCIAL PROFILE
-
-.widget.socialicons,
-.widget.profile .bk-profile-socialicons {
-		padding: 0px;
-		font-size: 1em;
-		font-family: @font-swatch7-font-family;
-
-		a {
-			text-decoration: none;
-			text-indent: 9999px;
-			white-space: nowrap;
-			overflow: hidden;
-		}
-		
-		span {
-			display: inline-block;
-
-			a {
-				display: inline-block;
-				margin-right: 6px;
-				margin-bottom: 8px;
-				background-size: 18px;
-				width: 32px;
-				height: 32px;
-				-webkit-border-radius: 30px;
-				-moz-border-radius: 30px;
-				border-radius: 30px;
-				background-color: @font-swatch7-background-color;
-				background-repeat: no-repeat;
-				background-position: center;
-
-				&:hover {
-					background-color: @font-swatch7-background-color-hover
-				}
-			}
-
-			&.bk-socialicons-twitter a {
-				background-image: image('/images/social/socialicons-twitter.png');
-				background-image: image('/images/social/socialicons-twitter.svg');
-			}
-
-			&.bk-socialicons-linkedin a {
-				background-image: image('/images/social/socialicons-linkedin.png');
-				background-image: image('/images/social/socialicons-linkedin.svg');
-			}
-			
-			&.bk-socialicons-facebook a {
-				background-image: image('/images/social/socialicons-facebook.png');
-				background-image: image('/images/social/socialicons-facebook.svg');
-			}
-			
-			&.bk-socialicons-rss a {
-				background-image: image('/images/social/socialicons-rss.png');
-				background-image: image('/images/social/socialicons-rss.svg');
-			}
-			
-			&.bk-socialicons-googleplus a {
-				background-image: image('/images/social/socialicons-googleplus.png');
-				background-image: image('/images/social/socialicons-googleplus.svg');
-			}
-			
-			&.bk-socialicons-youtube a {
-				background-image: image('/images/social/socialicons-youtube.png');
-				background-image: image('/images/social/socialicons-youtube.svg');
-			}
-		}
 	}
 }
 
