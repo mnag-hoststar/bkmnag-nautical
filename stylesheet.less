@@ -72,8 +72,8 @@ blockquote {
 	font-style: italic;
 
 	.style--light & {
-		color: @contrast--light;
-		background-color: fade(@color--accent, 10%);
+		color: @font-swatch5-color;
+		background-color: fade(@color-swatch3, 10%);
 	}
 
 	.style--accent & {
@@ -97,7 +97,7 @@ blockquote {
 		vertical-align: -.2em;
 
 		.style--light & {
-			color: @color--accent;
+			color: @color-swatch3;
 		}
 	
 		.style--accent & {
@@ -120,7 +120,7 @@ blockquote {
 		vertical-align: -.3em;
 
 		.style--light & {
-			color: fade(@contrast--light, 60%);
+			color: fade(@font-swatch5-color, 60%);
 		}
 	
 		.style--accent & {
@@ -141,7 +141,7 @@ blockquote {
 		color: fade(@font-swatch5-color, 80%);
 
 		.style--light & {
-			color: fade(@contrast--light, 80%);
+			color: fade(@font-swatch5-color, 80%);
 		}
 	
 		.style--accent & {
@@ -221,8 +221,8 @@ table {
 	color: @font-swatch5-color;
 
 	.style--light & {
-		border-top-color: @contrast--light;
-		color: @contrast--light;
+		border-top-color: @font-swatch5-color;
+		color: @font-swatch5-color;
 	}
 
 	.style--accent & {
@@ -255,8 +255,8 @@ th {
 	color: @font-swatch4-color;
 
 	.style--light & {
-		border-bottom-color: @contrast--light;
-		color: @contrast--light;
+		border-bottom-color: @font-swatch5-color;
+		color: @font-swatch4-color;
 	}
 
 	.style--accent & {
@@ -288,7 +288,7 @@ td {
 	letter-spacing: @font-swatch5-letter-spacing;
 
 	.style--light & {
-		border-bottom-color: fade(@contrast--light, 60%);
+		border-bottom-color: fade(@font-swatch5-color, 60%);
 	}
 
 	.style--accent & {
@@ -327,7 +327,7 @@ td {
 			border-bottom: 1px solid fade(@font-swatch5-color, 60%);
 
 			.style--light & {
-				border-bottom-color: fade(@contrast--light, 60%);
+				border-bottom-color: fade(@font-swatch5-color, 60%);
 			}
 		
 			.style--accent & {
@@ -344,7 +344,7 @@ td {
 			border-bottom: 1px solid fade(@font-swatch5-color, 60%);
 
 			.style--light & {
-				border-bottom-color: fade(@contrast--light, 60%);
+				border-bottom-color: fade(@font-swatch5-color, 60%);
 			}
 		
 			.style--accent & {
@@ -362,7 +362,7 @@ tr:last-child td {
 	border-bottom: 1px solid @font-swatch5-color;
 
 	.style--light & {
-		border-bottom-color: @contrast--light;
+		border-bottom-color: @font-swatch5-color;
 	}
 
 	.style--accent & {
@@ -386,7 +386,7 @@ tr:last-child td {
 			border-bottom: 1px solid @font-swatch5-color;
 
 			.style--light & {
-				border-bottom-color: @contrast--light;
+				border-bottom-color: @font-swatch5-color;
 			}
 		
 			.style--accent & {
@@ -402,7 +402,7 @@ tr:last-child td {
 			border-bottom: 1px solid @font-swatch5-color;
 
 			.style--light & {
-				border-bottom-color: @contrast--light;
+				border-bottom-color: @font-swatch5-color;
 			}
 		
 			.style--accent & {
@@ -1569,7 +1569,10 @@ footer.bk-footer {
 	width: auto;
 	max-width: none;
 
-	.style--light &,
+	.style--light & {
+		background-color: @color__container--background;
+    }
+
 	.style--accent &,
 	.style--dark & {
         background-color: transparent;
@@ -1583,7 +1586,10 @@ footer.bk-footer {
 	width: auto;
 	max-width: none;
 
-	.style--light &,
+	.style--light & {
+		background-color: @color__container--background;
+    }
+
 	.style--accent &,
 	.style--dark & {
         background-color: transparent;
