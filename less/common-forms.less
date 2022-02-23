@@ -9,6 +9,8 @@ button.button,
 .contactform button.btn,
 .advancedcontactform button,
 .advancedcontactform button.btn,
+.signupform fieldset button,
+.signupform fieldset button.btn,
 .widget.tweet a,
 .widget.clicktocall a,
 .widget.dropbox button,
@@ -21,14 +23,14 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a,
 .widget.yelpreview .review-body .review-link a,
 form.blog-search-form .form-group button,
 .blog-post-more-link a {
-	padding: 0 15px;
 	display: inline-block;
+	padding: 0.9em 20px;
 	cursor: pointer;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	line-height: (@font-swatch7-font-size * 2.5);
+	line-height: 1em;
 	border-radius: 20px;
 	font-family: @font-swatch7-font-family;
 	font-size: @font-swatch7-font-size;
@@ -41,13 +43,8 @@ form.blog-search-form .form-group button,
 	letter-spacing: 0.5px;
 	text-shadow: none;
 	border: none;
+	height: 36px;
 	-webkit-font-smoothing: subpixel-antialiased !important;
-
-	@media @mobile {
-		padding: 0 1.2em;
-		font-size: bkscale(@font-swatch7-font-size, 0.75);
-		line-height: (@font-swatch7-font-size * 2);
-	} 
 
 	&:hover {
 		background-color: darken(@font-swatch7-background-color, 5%);
@@ -116,9 +113,6 @@ footer.bk-footer .widget.profile .bk-profile-socialicons {
 		display: inline-block;
 
 		a {
-			display: flex;
-			justify-content: center;
-			align-items: center;
 			background-image: none;
 			margin: 0 5px 10px;
 			padding: 0;
@@ -128,11 +122,16 @@ footer.bk-footer .widget.profile .bk-profile-socialicons {
 			border-radius: 50%;
 			text-indent: 0;
 			font-size: 0;
+			text-align: center;
 
 			&:before {
 				font-family: 'FontAwesome';
 				text-indent: 0;
-				font-size: 24px;
+				font-size: 18px;
+				display: block;
+				height: 32px;
+				width: 32px;
+				line-height: 32px;
 			}
 		}
 
@@ -148,22 +147,44 @@ footer.bk-footer .widget.profile .bk-profile-socialicons {
 	}
 }
 
+// Labels
+
+label,
+.label,
+.widget label,
+.widget .label,
+.ecom-product-vartitle {
+	display: inline-block;
+	font-family: @font-swatch5-font-family;
+	font-size: @font-swatch5-font-size;
+	font-weight: @font-swatch5-font-weight;
+	line-height: @font-swatch5-line-height;
+	color: darken(@font-swatch5-color,10%);
+	letter-spacing: @font-swatch5-letter-spacing;
+	margin-bottom: 0.5em;
+	width: inherit;
+    word-break: break-word; 
+}
+
 // Text Inputs
 
 input,
 textarea,
 form input,
 form textarea,
+select,
+form select,
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-	background-color: darken(@color-swatch1,5%);
+	background-color: darken(@color-swatch1, 5%);
 	border: none;
 	border-radius: 20px;
+	border: 1px solid transparent;
 	padding: 0 1em;
 	margin-right: 0.6em;
 	text-indent: 0;
-	height: (@font-swatch7-font-size * 2.5 + 1);
-	line-height: (@font-swatch7-font-size * 2.5 + 1);
+    height: 36px;
+    line-height: 36px;
 	font-family: @font-swatch5-font-family;
 	font-size: @font-swatch5-font-size;
 	color: @font-swatch5-color;
@@ -171,17 +192,21 @@ input:-webkit-autofill:focus {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 
-	@media @mobile {
-		font-size: bkscale(@font-swatch7-font-size, 0.75);
-		height: (@font-swatch7-font-size * 2);
-		line-height: (@font-swatch7-font-size * 2);
-	} 
-
-	&:hover,
-	&:focus {
-		background-color: darken(@color-swatch1,3%);
-		color: darken(@font-swatch5-color, 20%);
+	&:hover {
+		border-color: @color-swatch3;
 		outline: none;
+
+		.style--light & {
+			border-color: @color-swatch3;
+		}
+
+		.style--accent & {
+			border-color: @color--dark;
+		}
+
+		.style--dark & {
+			border-color: @color--accent;
+		}
 	}
 }
 
@@ -190,36 +215,12 @@ textarea {
 	min-height: 10em;
 	padding-top: 0.6em;
 	padding-bottom: 0.6em;
-	border-radius: 15px;
+	border-radius: 20px;
 
 	@media @mobile {
 		line-height: bkscale(@font-swatch7-line-height, 0.5);
 		padding-top: 0.5em;
 		padding-bottom: 0.5em;
-	} 
-}
-
-// Labels
-
-label,
-.label,
-.widget label,
-.widget .label,
-.ecom-product-vartitle {
-	display: inline-block!important;
-	font-family:@font-swatch5-font-family;
-	font-size:@font-swatch5-font-size;
-	font-weight:@font-swatch5-font-weight;
-	line-height:@font-swatch5-line-height;
-	color: darken(@font-swatch5-color,10%);
-	letter-spacing: @font-swatch5-letter-spacing;
-	margin-bottom: 0.5em;
-	width: inherit;
-    word-break: break-word;
-	
-	@media @mobile {
-		line-height: bkscale(@font-swatch4-line-height, 0.8);
-		font-size:bkscale(@font-swatch4-font-size, 0.8);
 	} 
 }
 
@@ -241,41 +242,19 @@ label,
     }
 }
 
-select {
-	text-indent: 0.01px;
-	text-overflow: '';
-	cursor: pointer;
+select,
+form select {
+	display: block;
 	position: relative;
+	padding: 0 2.2em 0 1em;
+	padding-right: 2.75em;
+	width: 100%;
+	.appearance(none) !important;
+	background-image: url("data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNCAyNCI+Cgk8cG9seWxpbmUgc3Ryb2tlPSIjNzY3ODgwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjMiIHBvaW50cz0iMjAuMSw4LjYgMTIsMTYuNyAzLjksOC42IiAvPgo8L3N2Zz4=");
 	background-repeat: no-repeat;
-	background-position: right center;
-	margin: 0;
-	border: 1px solid @color-swatch3;
-	background-color: @color-swatch1;
-	color: @color-swatch5;
-	border-radius: 5px;
-	position: relative;
-	display: inline-block;
-	font-family: @font-swatch7-font-family;
-	font-size: @font-swatch7-font-size;
-	font-weight: @font-swatch7-font-weight;
-	height: (@font-swatch7-font-size * 2.5 );
-	line-height: 1;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-
-	@media @mobile {
-		font-size: bkscale(@font-swatch7-font-size, 0.75);
-		height: (@font-swatch7-font-size * 2);
-	} 
-
-	&:hover {
-		border-color: @color-swatch2;
-	}
-
-	&:focus {
-		border-color: @color-swatch2;
-	}
+	background-position: right 0.75em center;
+	background-size: 1.2em;
+	text-overflow: ellipsis;
 
 	@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
 		background-image: none;
@@ -359,6 +338,7 @@ select {
 			width: floor(@font-swatch5-line-height*0.8);
 			background-color: @color-swatch1;
 			border: 1px solid @font-swatch7-background-color;
+			border-radius: 0;
 
 			.style--light & {
 				border-color: @color-swatch1;
@@ -436,6 +416,12 @@ select {
 		text-decoration: underline;
 		border: none;
 	}
+}
+
+.widget.advancedcontactform .form-group.advancedcontactform__form-group--terms,
+.widget.contactform .form-group.contactform__form-group--terms,
+.widget.signupform .form-group.signupform__form-group--terms {
+	margin: 10px 0;
 }
 
 // Registration Form
