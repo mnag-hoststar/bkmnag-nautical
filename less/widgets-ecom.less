@@ -546,7 +546,20 @@
 
 			.ecom-product-tag,
 			.ecom-product-category {
+				display: flex;
+				flex-wrap: wrap;
 				margin-bottom: 1em;
+
+				&:after {
+					content: ':\00a0';
+					order: 0;
+					display: inline-block;
+				}
+			}
+
+			.store-category-link,
+			.ecom-product-tag-link {
+				order: 1;
 			}
 
 			.ecom-product-cattag {
@@ -640,7 +653,7 @@
 		}
 
 		&:before {
-			content: "";
+			content: '';
 			display: block;
 			position: absolute;
 			line-height: 40px;
