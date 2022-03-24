@@ -83,15 +83,15 @@
 					word-break: break-word;
 				
 					.style--light & {
-						background-color: fade(@color-swatch5, 20%);
+						color: fade(@contrast--light, 30%);
 					}
 				
 					.style--accent & {
-						background-color: fade(@contrast--accent, 20%);
+						color: fade(@contrast--accent, 50%);
 					}
 				
 					.style--dark & {
-						background-color: fade(@contrast--dark, 20%);
+						color: fade(@contrast--dark, 50%);
 					}
 
 					@media @mobile {
@@ -182,11 +182,51 @@
 			}
 		}
 	}
+
+	.productlist-pagination a {
+		.style--light & {
+		    color: fade(@contrast--light, 80%);
+		}
+
+		.style--accent & {
+		    color: fade(@contrast--accent, 80%);
+		}
+
+		.style--dark & {
+		    color: fade(@contrast--dark, 80%);
+		}
+
+		&.current {
+			.style--light & {
+			    color: @color--accent;
+			}
+
+			.style--accent & {
+			    color: @contrast--accent;
+			}
+
+			.style--dark & {
+			    color: @color--accent;
+			}
+		}
+	}
 }
 
 .widget.ecomproductslist .productlist-item-count {
 	color: fade(@color-swatch5, 60%);
 	margin: 1em 0;
+
+	.style--light & {
+		color: fade(@contrast--light, 60%);
+	}
+
+	.style--accent & {
+		color: fade(@contrast--accent, 40%);
+	}
+
+	.style--dark & {
+		color: fade(@color--accent, 40%);
+	}
 }
 	
 // Product Item
@@ -226,7 +266,7 @@
 		border: 1px solid fade(@color-swatch5, 10%);
 
 		.style--light & {
-			border-color: fade(@color-swatch5, 10%);
+			border-color: fade(@contrast--light, 10%);
 		}
 	
 		.style--accent & {
@@ -241,6 +281,18 @@
 			-webkit-box-shadow: 0px 5px 50px fade(@color-swatch5, 30%);
 			-moz-box-shadow: 0px 5px 50px fade(@color-swatch5, 30%);
 			box-shadow: 0px 5px 50px fade(@color-swatch5, 30%);
+
+			.style--light & {
+				box-shadow: 0px 5px 50px fade(@color--light, 30%);
+			}
+		
+			.style--accent & {
+				box-shadow: 0px 5px 50px fade(@color--accent, 30%);
+			}
+		
+			.style--dark & {
+				box-shadow: 0px 5px 50px fade(@color--dark, 30%);
+			}
 		}
 	}
 }
@@ -281,7 +333,7 @@
 	background-color: fade(@color-swatch5, 10%);
 
 	.style--light & {
-		background-color: fade(@color-swatch5, 10%);
+		background-color: fade(@color--light, 10%);
 	}
 
 	.style--accent & {
@@ -303,12 +355,36 @@
 	line-height: 1.2em;
 	word-break: break-word;
     margin-bottom: 0.5em;
+
+    .style--light & {
+	    color: @contrast--light;
+	}
+
+	.style--accent & {
+	    color: @contrast--accent;
+	}
+
+	.style--dark & {
+	    color: @contrast--dark;
+	}
 }
 
 .widget.ecomproductslist .ecom-productlist-price,
 .widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-info .ecom-featuredproducts-price {
 	background-color: transparent;
 	color: @color-swatch5;
+
+	.style--light & {
+	    color: fade(@contrast--light, 80%);
+	}
+
+	.style--accent & {
+	    color: fade(@contrast--accent, 80%);
+	}
+
+	.style--dark & {
+	    color: fade(@contrast--dark, 80%);
+	}
 }
 
 // Categories List
@@ -374,6 +450,21 @@
 				word-break: break-word;
 				display: block;
 				text-align: center;
+
+				.style--light & {
+					background-color: @color--accent;
+					color: @contrast--accent;
+			 	}
+
+				.style--accent & {
+					background-color: @color--dark;
+					color: @contrast--dark;
+				}
+
+				.style--dark & {
+					background-color: @color--accent;
+					color: @contrast--accent;
+				}
 			}
 		}
 	}

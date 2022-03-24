@@ -22,7 +22,8 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a,
 .userregistration fieldset .userregistrationbtn,
 .widget.yelpreview .review-body .review-link a,
 form.blog-search-form .form-group button,
-.blog-post-more-link a {
+.blog-post-more-link a,
+a.contentgroup__link {
 	display: inline-block;
 	padding: 0.9em 20px;
 	cursor: pointer;
@@ -46,9 +47,39 @@ form.blog-search-form .form-group button,
 	height: 36px;
 	-webkit-font-smoothing: subpixel-antialiased !important;
 
+	.style--light & {
+		background-color: @color--accent;
+		color: @contrast--accent;
+ 	}
+
+	.style--accent & {
+		background-color: @color--dark;
+		color: @contrast--dark;
+	}
+
+	.style--dark & {
+		background-color: @color--accent;
+		color: @contrast--accent;
+	}
+
 	&:hover {
 		background-color: darken(@font-swatch7-background-color, 5%);
 		cursor: pointer;
+
+		.style--light & {
+			background-color: darken(@color--accent, 5%);
+			color: @contrast--accent;
+    	}
+
+     .style--accent & {
+         background-color: lighten(@color--dark, 10%);
+         color: @contrast--dark;
+     }
+
+     .style--dark & {
+         background-color: darken(@color--accent, 5%);
+         color: @contrast--accent;
+     }
 	}
 }
 
@@ -84,8 +115,8 @@ form.blog-search-form .form-group button,
 .widget.dropbox button span,
 .widget.filedownload button.btn {
 	&:before {
-        position: relative;
-        top: 0.1em;
+		position: relative;
+		top: 0.1em;
 		padding-right: 0.25em;
 		background-image: none;
 		font-family:'FontAwesome';
@@ -164,7 +195,19 @@ label,
 	letter-spacing: @font-swatch5-letter-spacing;
 	margin-bottom: 0.5em;
 	width: inherit;
-    word-break: break-word; 
+	word-break: break-word; 
+
+	.style--light & {
+	    color: fade(@contrast--light, 80%);
+	}
+
+	.style--accent & {
+	    color: fade(@contrast--accent, 80%);
+	}
+
+	.style--dark & {
+	    color: fade(@contrast--dark, 80%);
+	}
 }
 
 // Text Inputs
@@ -184,8 +227,8 @@ input:-webkit-autofill:focus {
 	padding: 0 1em;
 	margin-right: 0.6em;
 	text-indent: 0;
-    height: 36px;
-    line-height: 36px;
+	height: 36px;
+	line-height: 36px;
 	font-family: @font-swatch5-font-family;
 	font-size: @font-swatch5-font-size;
 	color: @font-swatch5-color;
@@ -197,12 +240,8 @@ input:-webkit-autofill:focus {
 		border-color: @color-swatch3;
 		outline: none;
 
-		.style--light & {
-			border-color: @color-swatch3;
-		}
-
 		.style--accent & {
-			border-color: @color--dark;
+			border-color: @contrast--accent;
 		}
 
 		.style--dark & {
@@ -264,6 +303,18 @@ form select {
 	option {
 		background-color: @color-swatch1;
 		color: @font-swatch5-color;
+
+		.style--light & {
+			color: fade(@contrast--light, 80%);
+		}
+
+		.style--accent & {
+			color: fade(@contrast--accent, 80%);
+		}
+
+		.style--dark & {
+			color: fade(@contrast--dark, 80%);
+		}
 	}
 }
 
@@ -342,12 +393,8 @@ form select {
 			border: 1px solid @font-swatch7-background-color;
 			border-radius: 0;
 
-			.style--light & {
-				border-color: @color-swatch1;
-			}
-
 			.style--accent & {
-				border-color: @color--dark;
+				border-color: @contrast--accent;
 			}
 
 			.style--dark & {
@@ -373,19 +420,12 @@ form select {
 			height: floor(@font-swatch5-line-height*0.8);
 			transform: scale(50%);
 
-			.style--light & {
-				background-color: @font-swatch7-background-color;
-				border: 1px solid @font-swatch7-background-color;
-			}
-
 			.style--accent & {
-				background-color: @color--dark;
-				border: 1px solid @color--dark;
+				border-color: @contrast--accent;
 			}
 
 			.style--dark & {
-				background-color: @color--accent;
-				border: 1px solid @color--accent;
+				border-color: @color--accent;
 			}
 		}
 	}
@@ -399,12 +439,8 @@ form select {
 			box-shadow: -6px -6px 0 0 inset @font-swatch7-background-color;
 			transform: scale(50%) rotate(45deg);
 
-			.style--light & {
-				box-shadow: -6px -6px 0 0 inset @font-swatch7-background-color;
-			}
-
 			.style--accent & {
-				box-shadow: -6px -6px 0 0 inset @color--dark;
+				box-shadow: -6px -6px 0 0 inset @contrast--accent;
 			}
 
 			.style--dark & {
@@ -416,6 +452,18 @@ form select {
 	label[for*="input--terms"] span a.form__link {
 		text-decoration: underline;
 		border: none;
+
+		.style--light & {
+		    color: fade(@contrast--light, 80%);
+		}
+
+		.style--accent & {
+		    color: fade(@contrast--accent, 80%);
+		}
+
+		.style--dark & {
+		    color: fade(@contrast--dark, 80%);
+		}
 	}
 }
 
