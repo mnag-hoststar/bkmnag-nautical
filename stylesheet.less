@@ -8,27 +8,6 @@
 @desktop: ~"only screen and (min-width: 769px)";
 @mobile: ~"only screen and (min-width: 480px)";
 
-// BASEKIT ELEMENTS
-
-.top-level-overlay button.top-level-overlay__delete-button,
-.row-overlay__delete-button,
-.top-level-overlay button.top-level-overlay__arrangement-button--up,
-.row-overlay__arrangement-button--up,
-.top-level-overlay button.top-level-overlay__arrangement-button--down,
-.row-overlay__arrangement-button--down, .row-overlay__edit-button {
-	background: transparent !important;
-}
-
-.row-overlay__edit-button {
-	background: #fff !important;
-}
-
-.is-dropdown-open .row-overlay__edit-button .row-overlay__edit-button-icon,
-.is-setting-open .row-overlay__edit-button .row-overlay__edit-button-icon {
-	left: auto !important;
-    top: auto !important;
-}
-
 body {
 	position: relative;
 	background-color: @color-swatch1;
@@ -111,7 +90,7 @@ blockquote {
 
 // Unordered and Ordered List
 
-.widget.content,
+.widget.content .bk-content-text,
 .blog-post-content,
 .ecom-product-long-description {
 	ul {
@@ -120,6 +99,7 @@ blockquote {
 		list-style: none;
 	
 		li {
+			background: transparent;
 			position: relative;
 			padding: 0;
 			margin: 0 0 0.25em 0;
@@ -390,8 +370,20 @@ body.edit .widget.extendednavigation {
 	overflow: visible;
 }
 
-.bk-pt-default header {
+.bk-pt-default > header {
 	border-bottom: 1px solid darken(@color-swatch1,10%);
+
+	.style--light & {
+	    border-color: darken(@color--light, 10%);
+	}
+
+	.style--accent & {
+	    border-color: lighten(@color--accent, 15%);
+	}
+
+	.style--dark & {
+	    border-color: lighten(@color--dark, 15%);
+	}
 }
 
 //HEADER
@@ -796,6 +788,8 @@ footer.bk-footer {
 			&.folder-open ul,
 			&.folder-open:hover ul {
 				display: block;
+				min-width: 180px;
+				max-width: 300px;
 
 				@media @tablet {
 					display: block;
@@ -890,14 +884,40 @@ footer.bk-footer {
 
 .widget.content {
 	padding: 0;
-	overflow: hidden;
 
 	a {
 		border-bottom: 1px solid @font-swatch6-color;
 
+		.style--light & {
+		    color: fade(@contrast--light, 80%);
+		}
+
+		.style--accent & {
+		    color: fade(@contrast--accent, 80%);
+		}
+
+		.style--dark & {
+		    color: fade(@contrast--dark, 80%);
+		}
+
 		&:hover {
 			color: @color-swatch3;
 			border-bottom: 1px solid @color-swatch3;
+
+			.style--light & {
+				border-color: @color--accent;
+			    color: @color--accent;
+			}
+
+			.style--accent & {
+				border-color: @contrast--accent;
+			    color: @contrast--accent;
+			}
+
+			.style--dark & {
+				border-color: @color--accent;
+			    color: @color--accent;
+			}
 		}
 	}
 
@@ -953,19 +973,55 @@ footer.bk-footer {
 		line-height: @font-swatch4-line-height;
 		text-decoration: none;
 
+		.style--light & {
+	        color: @contrast--light;
+	    }
+
+	    .style--accent & {
+	        color: @contrast--accent;
+	    }
+
+	    .style--dark & {
+	        color: @contrast--dark;
+	    }
+
 		&:hover {
 			color: lighten(@font-swatch4-color, 30%);
+
+			.style--light & {
+		        color: lighten(@contrast--light, 30%);
+		    }
+
+		    .style--accent & {
+		        color: lighten(@contrast--accent, 30%);
+		    }
+
+		    .style--dark & {
+		        color: lighten(@contrast--dark, 30%);
+		    }
 		}
 	}
 
 	span.image-description {
 		display: block;
-		margin:0 0 10px;
+		margin: 0 0 10px;
 		font-family: @font-swatch5-font-family;
 		font-weight: @font-swatch5-font-weight;
 		font-size: @font-swatch5-font-size;
 		line-height: @font-swatch5-line-height;
 		color: @font-swatch5-color;
+
+		.style--light & {
+		    color: fade(@contrast--light, 80%);
+		}
+
+		.style--accent & {
+		    color: fade(@contrast--accent, 80%);
+		}
+
+		.style--dark & {
+		    color: fade(@contrast--dark, 80%);
+		}
 	}
 }
 
@@ -979,6 +1035,18 @@ footer.bk-footer {
 		height: 1px;
 		width: 100%;
 		border: none;
+
+		.style--light & {
+		    background-color: fade(@contrast--light, 20%);
+		}
+
+		.style--accent & {
+		    background-color: fade(@contrast--accent, 20%);
+		}
+
+		.style--dark & {
+		    background-color: fade(@contrast--dark, 20%);
+		}
 	}
 }
 
@@ -1132,8 +1200,9 @@ footer.bk-footer {
 .widget.clicktocall {
 	a,
 	a:hover {
+		.align-items(center);
+		.flex-display(inline-flex);
 		padding: 0 1.6em;
-		padding-left: 50px;
 		background-position: 18px center;
 		
 		@media @mobile {
@@ -1157,12 +1226,36 @@ footer.bk-footer {
 		border-radius: 5px;
 		padding: 30px 30px 0 30px;
 
+		.style--light & {
+	        border-color: darken(@color--light, 10%);
+	    }
+
+	    .style--accent & {
+	        border-color: lighten(@color--accent, 15%);
+	    }
+
+	    .style--dark & {
+	        border-color: lighten(@color--dark, 15%);
+	    }
+
 		li {
 			position: relative;
 			min-height: 129px;
 			border-bottom: 1px solid darken(@color-swatch1, 10%);
 			margin-bottom: 30px;
 			padding-bottom: 30px;
+
+			.style--light & {
+		        border-color: darken(@color--light, 10%);
+		    }
+
+		    .style--accent & {
+		        border-color: lighten(@color--accent, 15%);
+		    }
+
+		    .style--dark & {
+		        border-color: lighten(@color--dark, 15%);
+		    }
 
 			@media @mobile {
 				min-height: 90px;
@@ -1183,7 +1276,7 @@ footer.bk-footer {
 				text-decoration: none;
 		
 				.style--light & {
-					color: fade(@color-swatch5, 50%);
+					color: fade(@contrast--light, 50%);
 				}
 			
 				.style--accent & {
@@ -1214,6 +1307,18 @@ footer.bk-footer {
 					display: block;
 					color: @color-swatch3;
 					font-size: @font-swatch5-font-size;
+
+					.style--light & {
+						color: @color--accent;
+					}
+
+					.style--accent & {
+						color: @contrast--accent;
+					}
+
+					.style--dark & {
+						color: @color--accent;
+					}
 				}
 
 				p {
@@ -1222,15 +1327,15 @@ footer.bk-footer {
 					color: darken(@font-swatch5-color, 40%);
 		
 					.style--light & {
-						color: darken(@font-swatch5-color, 40%);
+						color: fade(@contrast--light, 80%);
 					}
 				
 					.style--accent & {
-						color: @contrast--accent;
+						color: fade(@contrast--accent, 80%);
 					}
 				
 					.style--dark & {
-						color: @contrast--dark;
+						color: fade(@contrast--dark, 80%);
 					}
 
 					a {
@@ -1240,15 +1345,15 @@ footer.bk-footer {
 						line-height: @font-swatch5-line-height;
 		
 						.style--light & {
-							color: darken(@font-swatch5-color, 40%);
+							color: fade(@contrast--light, 80%);
 						}
 					
 						.style--accent & {
-							color: @contrast--accent;
+							color: fade(@contrast--accent, 80%);
 						}
 					
 						.style--dark & {
-							color: @contrast--dark;
+							color: fade(@contrast--dark, 80%);
 						}
 					}
 				}
@@ -1265,6 +1370,18 @@ footer.bk-footer {
 		display: block;
 		margin-bottom: 20px;
 		background-color: @color-swatch1;
+
+		.style--light:not(.style--background-image) & {
+	        background-color: @color--light;
+	    }
+
+	    .style--accent:not(.style--background-image) & {
+	        background-color: @color--accent;
+	    }
+
+	    .style--dark:not(.style--background-image) & {
+	        background-color: @color--dark;
+	    }
 	}
 
 	.form-group {
@@ -1386,6 +1503,18 @@ footer.bk-footer {
 	display: block;
 	margin: 20px 0;
 	background-color: @color-swatch1;
+
+	.style--light:not(.style--background-image) & {
+        background-color: @color--light;
+    }
+
+    .style--accent:not(.style--background-image) & {
+        background-color: @color--accent;
+    }
+
+    .style--dark:not(.style--background-image) & {
+        background-color: @color--dark;
+    }
 
 	fieldset {
 		border: none;
@@ -1545,10 +1674,34 @@ footer.bk-footer {
 			height: 8px;
 			margin: 6px;
 			border-radius: 50%;
+
+			.style--light & {
+			    background-color: fade(@contrast--light, 40%);
+			}
+
+			.style--accent & {
+			    background-color: fade(@contrast--accent, 40%);
+			}
+
+			.style--dark & {
+			    background-color: fade(@contrast--dark, 40%);
+			}
 			
 			&.selected {
 				border: 0;
 				background-color: @color-swatch5;
+
+				.style--light & {
+				    background-color: fade(@contrast--light, 80%);
+				}
+
+				.style--accent & {
+				    background-color: fade(@contrast--accent, 80%);
+				}
+
+				.style--dark & {
+				    background-color: fade(@contrast--dark, 80%);
+				}
 			}
 		}
 	}

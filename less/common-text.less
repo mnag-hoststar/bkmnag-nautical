@@ -2,6 +2,20 @@
 
 // HEADINGS
 
+h1, h2, h3, h4, h5, h6 {
+	.style--light & {
+	    color: @contrast--light;
+	}
+
+	.style--accent & {
+	    color: @contrast--accent;
+	}
+
+	.style--dark & {
+	    color: @contrast--dark;
+	}
+}
+
 h5 {
 	font-family: @font-swatch4-font-family;
 	font-weight: @font-swatch4-font-weight;
@@ -22,6 +36,22 @@ h1, h2, h3, h4, h5, h6, p, a, pre, code {
 	word-break: break-word;
 }
 
+p, .paragraph, ul, ol, li {
+	// This is already defined in the html tag.
+
+	.style--light & {
+	    color: fade(@contrast--light, 80%);
+	}
+
+	.style--accent & {
+	    color: fade(@contrast--accent, 80%);
+	}
+
+	.style--dark & {
+	    color: fade(@contrast--dark, 80%);
+	}
+}
+
 .widget.content .wysihtml-editor-content,
 .widget.embed .embed-content,
 .widget.content.in-editing .wysihtml-editor-content {
@@ -31,17 +61,17 @@ h1, h2, h3, h4, h5, h6, p, a, pre, code {
 	&, p, span, small, pre, code,
 	table, th, td {
 		color: @font-swatch5-color;
-	
+
 		.style--light & {
-			color: @font-swatch5-color;
+		    color: fade(@contrast--light, 80%);
 		}
-	
+
 		.style--accent & {
-			color: @contrast--accent;
+		    color: fade(@contrast--accent, 80%);
 		}
-	
+
 		.style--dark & {
-			color: @contrast--dark;
+		    color: fade(@contrast--dark, 80%);
 		}
 	}
 }
@@ -50,20 +80,34 @@ ul, ol, li {
 	color: @font-swatch5-color;
 			
 	.style--light & {
-		color: @font-swatch5-color;
+	    color: fade(@contrast--light, 80%);
 	}
 
 	.style--accent & {
-		color: @contrast--accent;
+	    color: fade(@contrast--accent, 80%);
 	}
 
 	.style--dark & {
-		color: @contrast--dark;
+	    color: fade(@contrast--dark, 80%);
 	}
 }
 
 p {
 	padding-bottom: 1em;
+}
+
+label:not(.clicktocall__label), .label-text {
+    .style--light & {
+	    color: fade(@contrast--light, 60%);
+	}
+
+	.style--accent & {
+	    color: fade(@contrast--accent, 60%);
+	}
+
+	.style--dark & {
+	    color: fade(@contrast--dark, 60%);
+	}
 }
 
 // PREFORMATTED AND CODE TEXT
