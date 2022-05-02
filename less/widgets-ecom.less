@@ -452,17 +452,19 @@
 					}
 				}
 			}
+			
+			.ecom-product-cattag {
+				.ecom-product-tag,
+				.ecom-product-category {
+					display: flex;
+					flex-wrap: wrap;
+					margin-bottom: 1em;
 
-			.ecom-product-tag,
-			.ecom-product-category {
-				display: flex;
-				flex-wrap: wrap;
-				margin-bottom: 1em;
-
-				&:after {
-					content: ':\00a0';
-					order: 0;
-					display: inline-block;
+					&:after {
+						content: ':\00a0';
+						order: 0;
+						display: inline-block;
+					}
 				}
 			}
 
