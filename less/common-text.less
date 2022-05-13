@@ -38,9 +38,10 @@ h1, h2, h3, h4, h5, h6, p, a, pre, code {
 
 p, .paragraph, ul, ol, li {
 	// This is already defined in the html tag.
+	color: fade(@font-swatch5-color, 80%);
 
 	.style--light & {
-	    color: fade(@contrast--light, 80%);
+		color: fade(@font-swatch5-color, 80%);
 	}
 
 	.style--accent & {
@@ -60,10 +61,10 @@ p, .paragraph, ul, ol, li {
 
 	&, p, span, small, pre, code,
 	table, th, td {
-		color: @font-swatch5-color;
+		color: fade(@font-swatch5-color, 80%);
 
 		.style--light & {
-		    color: fade(@contrast--light, 80%);
+			color: fade(@font-swatch5-color, 80%);
 		}
 
 		.style--accent & {
@@ -80,15 +81,15 @@ ul, ol, li {
 	color: @font-swatch5-color;
 			
 	.style--light & {
-	    color: fade(@contrast--light, 80%);
+		color: @font-swatch5-color;
 	}
 
 	.style--accent & {
-	    color: fade(@contrast--accent, 80%);
+	    color: @contrast--accent;
 	}
 
 	.style--dark & {
-	    color: fade(@contrast--dark, 80%);
+	    color: @contrast--dark;
 	}
 }
 
@@ -98,7 +99,7 @@ p {
 
 label:not(.clicktocall__label), .label-text {
     .style--light & {
-	    color: fade(@contrast--light, 60%);
+	    color: fade(@font-swatch5-color, 60%);
 	}
 
 	.style--accent & {
@@ -118,20 +119,23 @@ pre, code {
 	padding: 0.5em 1em;
 	border: none;
 	border-radius: 20px;
-	background-color: fade(@color-swatch5, 10%);
+	background-color: fade(@color-swatch3, 10%);
 	overflow: auto;
 	font-family: monospace;
 
 	.style--light & {
-		background-color: fade(@color-swatch5, 10%);
+		color: @font-swatch5-color;
+		background-color: fade(@color-swatch3, 10%);
 	}
 
 	.style--accent & {
+		color: @contrast--accent;
 		background-color: fade(@contrast--accent, 10%);
 	}
 
 	.style--dark & {
-		background-color: fade(@contrast--dark, 10%);
+		color: @contrast--dark;
+		background-color: fade(@contrast--accent, 10%);
 	}
 }
 

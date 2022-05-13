@@ -81,9 +81,10 @@
 					margin-bottom: 5px;
 					text-transform: uppercase;
 					word-break: break-word;
+					color: fade(@font-swatch5-color, 60%);
 				
 					.style--light & {
-						color: fade(@contrast--light, 30%);
+						color: fade(@font-swatch5-color, 60%);
 					}
 				
 					.style--accent & {
@@ -185,7 +186,7 @@
 
 	.productlist-pagination a {
 		.style--light & {
-		    color: fade(@contrast--light, 80%);
+		    color: fade(@font-swatch5-color, 80%);
 		}
 
 		.style--accent & {
@@ -217,7 +218,7 @@
 	margin: 1em 0;
 
 	.style--light & {
-		color: fade(@contrast--light, 60%);
+		color: fade(@color-swatch5, 60%);
 	}
 
 	.style--accent & {
@@ -266,7 +267,7 @@
 		border: 1px solid fade(@color-swatch5, 10%);
 
 		.style--light & {
-			border-color: fade(@contrast--light, 10%);
+			border-color: fade(@color-swatch5, 10%);
 		}
 	
 		.style--accent & {
@@ -283,15 +284,15 @@
 			box-shadow: 0px 5px 50px fade(@color-swatch5, 30%);
 
 			.style--light & {
-				box-shadow: 0px 5px 50px fade(@color--light, 30%);
+				box-shadow: 0px 5px 50px fade(@color-swatch5, 30%);
 			}
 		
 			.style--accent & {
-				box-shadow: 0px 5px 50px fade(@color--accent, 30%);
+				box-shadow: 0px 5px 50px darken(@color--accent, 20%);
 			}
 		
 			.style--dark & {
-				box-shadow: 0px 5px 50px fade(@color--dark, 30%);
+				box-shadow: 0px 5px 50px darken(@color--dark, 20%);
 			}
 		}
 	}
@@ -305,13 +306,14 @@
 	margin-bottom: 0;
 	position: relative;
 	overflow: visible;
-	margin: 20px;
-	padding: 0;
+	padding: 20px;
 	background-position: center;
 	text-align: center;
 	height: 210px;
 	width: auto;
 	border: none;
+	background-color: @color-swatch1;
+	background-size: auto 180px;
 
 	@media @mobile {
 		border: none;
@@ -333,7 +335,7 @@
 	background-color: fade(@color-swatch5, 10%);
 
 	.style--light & {
-		background-color: fade(@color--light, 10%);
+		background-color: fade(@color-swatch5, 10%);
 	}
 
 	.style--accent & {
@@ -357,7 +359,7 @@
     margin-bottom: 0.5em;
 
     .style--light & {
-	    color: @contrast--light;
+	    color: @color-swatch2;
 	}
 
 	.style--accent & {
@@ -375,7 +377,7 @@
 	color: @color-swatch5;
 
 	.style--light & {
-	    color: fade(@contrast--light, 80%);
+	    color: fade(@color-swatch5, 80%);
 	}
 
 	.style--accent & {
@@ -452,8 +454,8 @@
 				text-align: center;
 
 				.style--light & {
-					background-color: @color--accent;
-					color: @contrast--accent;
+					background-color: @color-swatch3;
+					color: @color-swatch1;
 			 	}
 
 				.style--accent & {

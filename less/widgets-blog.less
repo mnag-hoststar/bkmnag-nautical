@@ -114,7 +114,7 @@
 			padding-bottom: 30px;
 
 			.style--light & {
-			    border-color: fade(@contrast--light, 80%);
+			    border-color: @color-swatch5;
 			}
 
 			.style--accent & {
@@ -155,7 +155,7 @@
 					color: @color-swatch3;
 
 					.style--light & {
-						color: @color--accent;
+						color: @color-swatch3;
 					}
 
 					.style--accent & {
@@ -179,18 +179,6 @@
 
 			.blog-post-date {
 				float: right;
-
-				.style--light & {
-					color: @color--accent;
-				}
-
-				.style--accent & {
-					color: @contrast--accent;
-				}
-
-				.style--dark & {
-					color: @color--accent;
-				}
 			}
 		}
 	}
@@ -200,8 +188,10 @@
 	}
 
 	.blog-post-pagination-page {
+		color: @font-swatch5-color;
+
 		.style--light & {
-			color: @color--accent;
+			color: @font-swatch5-color;
 		}
 
 		.style--accent & {

@@ -26,8 +26,20 @@ body {
 		font-family: @font-swatch2-font-family;
 		font-size: @font-swatch5-font-size;
 		font-weight: @font-swatch5-font-weight;
-		color: @font-swatch6-color;
+		color: @font-swatch5-color;
 		text-decoration: none;
+
+		.style--light & {
+			border-bottom-color: @font-swatch5-color;
+		}
+	
+		.style--accent & {
+			border-bottom-color: @contrast--accent;
+		}
+	
+		.style--dark & {
+			border-bottom-color: @contrast--dark;
+		}
 	}
 }
 
@@ -62,7 +74,7 @@ blockquote {
 
 	.style--dark & {
 		color: @contrast--dark;
-		background-color: fade(@color--accent, 10%);
+		background-color: fade(@contrast--accent, 10%);
 	}
 
 	&:before {
@@ -85,6 +97,10 @@ blockquote {
 		.style--dark & {
 			color: @contrast--dark;
 		}
+	}
+
+	&:after {
+		display: none;
 	}
 }
 
@@ -371,10 +387,10 @@ body.edit .widget.extendednavigation {
 }
 
 .bk-pt-default > header {
-	border-bottom: 1px solid darken(@color-swatch1,10%);
+	border-bottom: 1px solid darken(@color-swatch1, 10%);
 
 	.style--light & {
-	    border-color: darken(@color--light, 10%);
+	    border-color: darken(@color-swatch1, 10%);
 	}
 
 	.style--accent & {
@@ -735,20 +751,30 @@ footer.bk-footer {
 					z-index: 500;
 					display: none;
 					position: absolute;
+					left: auto;
+					right: 0;
 					width: 56%;
 					background-color: @color-swatch7;
-					padding: 10px 10px;
+					padding: 0 1em;
 					margin: 5px;
+					min-width: 180px;
+					max-width: 300px;
 	
 					@media @tablet { 
 						display: none;
 						position: static;
+						min-width: auto;
+						max-width: none;
 						width: 100%;
 						margin: 0 0;
 						padding: 0;
 					}
 				
 					> li {
+						display: block;
+						margin-top: 1em;
+						margin-bottom: 1em;
+
 						@media @tablet { 
 							border-bottom: none;
 						}
@@ -788,8 +814,6 @@ footer.bk-footer {
 			&.folder-open ul,
 			&.folder-open:hover ul {
 				display: block;
-				min-width: 180px;
-				max-width: 300px;
 
 				@media @tablet {
 					display: block;
@@ -889,7 +913,7 @@ footer.bk-footer {
 		border-bottom: 1px solid @font-swatch6-color;
 
 		.style--light & {
-		    color: fade(@contrast--light, 80%);
+		    color: @font-swatch6-color;
 		}
 
 		.style--accent & {
@@ -905,8 +929,8 @@ footer.bk-footer {
 			border-bottom: 1px solid @color-swatch3;
 
 			.style--light & {
-				border-color: @color--accent;
-			    color: @color--accent;
+				border-color: @color-swatch3;
+			    color: @color-swatch3;
 			}
 
 			.style--accent & {
@@ -974,7 +998,7 @@ footer.bk-footer {
 		text-decoration: none;
 
 		.style--light & {
-	        color: @contrast--light;
+	        color: @font-swatch4-color;
 	    }
 
 	    .style--accent & {
@@ -989,7 +1013,7 @@ footer.bk-footer {
 			color: lighten(@font-swatch4-color, 30%);
 
 			.style--light & {
-		        color: lighten(@contrast--light, 30%);
+		        color: lighten(@font-swatch4-color, 30%);
 		    }
 
 		    .style--accent & {
@@ -1012,7 +1036,7 @@ footer.bk-footer {
 		color: @font-swatch5-color;
 
 		.style--light & {
-		    color: fade(@contrast--light, 80%);
+		    color: @font-swatch5-color;
 		}
 
 		.style--accent & {
@@ -1037,7 +1061,7 @@ footer.bk-footer {
 		border: none;
 
 		.style--light & {
-		    background-color: fade(@contrast--light, 20%);
+		    background-color: lighten(@color-swatch5, 20%);
 		}
 
 		.style--accent & {
@@ -1146,6 +1170,18 @@ footer.bk-footer {
 		display: inline-block;
 		vertical-align: middle;
 		color: @color-swatch5;
+
+		.style--light & {
+			color: @color-swatch5;
+		}
+	
+		.style--accent & {
+			color: fade(@contrast--accent, 80%);
+		}
+	
+		.style--dark & {
+			color: fade(@contrast--dark, 80%);
+		}
 	}
 
 	.review {
@@ -1227,7 +1263,7 @@ footer.bk-footer {
 		padding: 30px 30px 0 30px;
 
 		.style--light & {
-	        border-color: darken(@color--light, 10%);
+	        border-color: darken(@color-swatch1, 10%);
 	    }
 
 	    .style--accent & {
@@ -1246,7 +1282,7 @@ footer.bk-footer {
 			padding-bottom: 30px;
 
 			.style--light & {
-		        border-color: darken(@color--light, 10%);
+		        border-color: darken(@color-swatch1, 10%);
 		    }
 
 		    .style--accent & {
@@ -1276,7 +1312,7 @@ footer.bk-footer {
 				text-decoration: none;
 		
 				.style--light & {
-					color: fade(@contrast--light, 50%);
+					color: fade(@color-swatch5, 50%);
 				}
 			
 				.style--accent & {
@@ -1309,7 +1345,7 @@ footer.bk-footer {
 					font-size: @font-swatch5-font-size;
 
 					.style--light & {
-						color: @color--accent;
+						color: @color-swatch3;
 					}
 
 					.style--accent & {
@@ -1327,7 +1363,7 @@ footer.bk-footer {
 					color: darken(@font-swatch5-color, 40%);
 		
 					.style--light & {
-						color: fade(@contrast--light, 80%);
+						color: fade(@font-swatch5-color, 80%);
 					}
 				
 					.style--accent & {
@@ -1345,7 +1381,7 @@ footer.bk-footer {
 						line-height: @font-swatch5-line-height;
 		
 						.style--light & {
-							color: fade(@contrast--light, 80%);
+							color: fade(@font-swatch5-color, 80%);
 						}
 					
 						.style--accent & {
@@ -1502,19 +1538,6 @@ footer.bk-footer {
  .widget.signupform {
 	display: block;
 	margin: 20px 0;
-	background-color: @color-swatch1;
-
-	.style--light:not(.style--background-image) & {
-        background-color: @color--light;
-    }
-
-    .style--accent:not(.style--background-image) & {
-        background-color: @color--accent;
-    }
-
-    .style--dark:not(.style--background-image) & {
-        background-color: @color--dark;
-    }
 
 	fieldset {
 		border: none;
@@ -1582,10 +1605,6 @@ footer.bk-footer {
 			min-height: 280px;
 			height: 280px;
 		}
-	}
-
-	.title {
-		display: block;
 	}
 
 	.content-wrapper {
@@ -1656,16 +1675,50 @@ footer.bk-footer {
 			}
 
 			&:after {
-				letter-spacing: -4px;
-				font-size: 20px;
 				color: @color-swatch1;
-				top:-7px;
+				line-height: 40px;
+				font-size: 23px;
+				text-align: center;
+				width: 42px;
 			
 				@media @mobile {
 					top: -13px;
 				}
 			}
+
+			&.pause:after {
+				line-height: 44px;
+				font-size: 23px;
+				text-align: center;
+				width: 42px;
+				height: 42px;
+				left: 2px;
+			}
 		}
+	}
+
+	.title,
+	.description {
+		display: block;
+		padding: 1.5rem;
+		color: @color-swatch1;
+	}
+
+	.title {
+		font-weight: bold;
+		font-family: @font-swatch8-font-family;
+		font-size: bkscale(@font-swatch5-font-size, 1.2);
+		line-height: @font-swatch5-line-height;
+	  
+		@media @mobile {
+			font-size: bkscale(@font-swatch5-font-size, 1);
+		}
+	}
+
+	.title + .description {
+		margin-top: -0.75rem;
+		padding-top: 0;
+		padding-bottom: 1.5rem;
 	}
 	
 	.slideshow-widget-controls {
@@ -1674,9 +1727,10 @@ footer.bk-footer {
 			height: 8px;
 			margin: 6px;
 			border-radius: 50%;
+			background-color: fade(@font-swatch5-color, 40%);
 
 			.style--light & {
-			    background-color: fade(@contrast--light, 40%);
+			    background-color: fade(@font-swatch5-color, 40%);
 			}
 
 			.style--accent & {
@@ -1692,15 +1746,15 @@ footer.bk-footer {
 				background-color: @color-swatch5;
 
 				.style--light & {
-				    background-color: fade(@contrast--light, 80%);
+				    background-color: @color-swatch5;
 				}
 
 				.style--accent & {
-				    background-color: fade(@contrast--accent, 80%);
+				    background-color: @contrast--accent;
 				}
 
 				.style--dark & {
-				    background-color: fade(@contrast--dark, 80%);
+				    background-color: @contrast--dark;
 				}
 			}
 		}
