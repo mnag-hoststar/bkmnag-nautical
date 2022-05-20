@@ -13,6 +13,7 @@ button.button,
 .signupform fieldset button.btn,
 .widget.tweet a,
 .widget.clicktocall a,
+.widget.clicktocall a:hover,
 .widget.dropbox button,
 .widget.filedownload button.btn,
 .widget.paypalbuynow .widget.button.paypal,
@@ -246,6 +247,12 @@ input:-webkit-autofill:focus {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 
+	.style--light &,
+	.style--accent &,
+	.style--dark & {
+		color: @font-swatch5-color;
+	}
+
 	&:hover {
 		border-color: @color-swatch3;
 		outline: none;
@@ -260,7 +267,8 @@ input:-webkit-autofill:focus {
 	}
 }
 
-textarea {
+textarea,
+form textarea {
 	line-height: bkscale(@font-swatch7-line-height, 0.7);
 	min-height: 10em;
 	padding-top: 0.6em;
@@ -448,14 +456,6 @@ form select {
 			border: 1px solid transparent;
 			box-shadow: -6px -6px 0 0 inset @font-swatch7-background-color;
 			transform: scale(50%) rotate(45deg);
-
-			.style--accent & {
-				box-shadow: -6px -6px 0 0 inset @contrast--accent;
-			}
-
-			.style--dark & {
-				box-shadow: -6px -6px 0 0 inset @color--accent;
-			}
 		}
 	}
 	
