@@ -24,7 +24,8 @@ button.button,
 .widget.yelpreview .review-body .review-link a,
 form.blog-search-form .form-group button,
 .blog-post-more-link a,
-a.contentgroup__link {
+a.contentgroup__link,
+.productlist-clear-search {
 	display: inline-block;
 	padding: 0.9em 20px;
 	cursor: pointer;
@@ -143,6 +144,16 @@ a.contentgroup__link {
 	span.file-name {
 		display: block;
 		margin: 0.5em 0;
+	}
+}
+
+// Product List Clear Search
+
+.productlist-clear-search {
+	margin: 10px 0 60px;
+
+	@media @mobile {
+		width: 100%;
 	}
 }
 
