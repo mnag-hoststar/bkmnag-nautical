@@ -25,7 +25,8 @@ button.button,
 form.blog-search-form .form-group button,
 .blog-post-more-link a,
 a.contentgroup__link,
-.productlist-clear-search {
+.productlist-clear-search,
+a.blog-back-home {
 	display: inline-block;
 	padding: 0.9em 20px;
 	cursor: pointer;
@@ -51,6 +52,10 @@ a.contentgroup__link,
 	-webkit-font-smoothing: subpixel-antialiased !important;
     word-break: break-word;
 
+	@media @mobile {
+		width: 100%;
+	}
+
 	.style--light & {
 		background-color: @font-swatch7-background-color;
 		color: @font-swatch7-color;
@@ -74,13 +79,13 @@ a.contentgroup__link,
 			background-color: darken(@font-swatch7-background-color, 5%);
     	}
 
-     .style--accent & {
-         background-color: lighten(@color--dark, 10%);
-     }
+		.style--accent & {
+			background-color: lighten(@color--dark, 10%);
+		}
 
-     .style--dark & {
-         background-color: darken(@color--accent, 5%);
-     }
+		.style--dark & {
+			background-color: darken(@color--accent, 5%);
+		}
 	}
 }
 
@@ -155,6 +160,12 @@ a.contentgroup__link,
 	@media @mobile {
 		width: 100%;
 	}
+}
+
+// Blog Back Button
+
+a.blog-back-home {
+	margin-bottom: 2em;
 }
 
 // SOCIAL BAR WIDGET / SOCIAL PROFILE
