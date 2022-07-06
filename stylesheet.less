@@ -1071,24 +1071,25 @@ footer.bk-footer {
 
 .widget.line {
 	padding: 20px 0;
+}
 
-	hr.line {
+hr.line,
+.content hr {
+	background-color: lighten(@color-swatch5, 20%);
+	height: 1px;
+	width: 100%;
+	border: none;
+
+	.style--light & {
 		background-color: lighten(@color-swatch5, 20%);
-		height: 1px;
-		width: 100%;
-		border: none;
+	}
 
-		.style--light & {
-		    background-color: lighten(@color-swatch5, 20%);
-		}
+	.style--accent & {
+		background-color: fade(@contrast--accent, 20%);
+	}
 
-		.style--accent & {
-		    background-color: fade(@contrast--accent, 20%);
-		}
-
-		.style--dark & {
-		    background-color: fade(@contrast--dark, 20%);
-		}
+	.style--dark & {
+		background-color: fade(@contrast--dark, 20%);
 	}
 }
 
