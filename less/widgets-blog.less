@@ -283,7 +283,7 @@
 			.blog-post-tags {
 				float: right;
 				width: 30%;
-				padding: 1em 0;
+				padding: 1em 0 0;
 
 				@media @bp-blog-small {
 					float: none;
@@ -296,12 +296,13 @@
 				
 				a {
 					display: inline-block;
-					padding: 0em 0.7em;
+					margin: 0.25em;
+					padding: 0.25em 0.5em;
+					border-radius: 10px;
 					background-color: @font-swatch7-background-color;
 					color: @font-swatch7-color;
-					font-size: 12px;
+					line-height: 1.5;
 					letter-spacing: 0.3px;
-					border-radius: 20px;
 
 					&:hover {
 						text-decoration: none;
