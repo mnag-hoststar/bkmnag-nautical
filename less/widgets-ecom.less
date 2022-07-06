@@ -578,6 +578,8 @@
 
 			.store-category-link,
 			.ecom-product-tag-link {
+				display: inline-block;
+				word-break: break-word;
 				order: 1;
 			}
 
@@ -585,15 +587,17 @@
 				margin: 0 0 1em 0;
 				border-top: 1px solid fade(@color-swatch2, 20%);
 				padding: 1em 0 0 0;
+				line-height: 2.5em;
 
 				.ecom-product-tag {
 					.ecom-product-tag-link {
-						display: inline-block;
-						padding: 0 10px;
-						border-radius: 20px; 
+						margin: 0.25em;
+						padding: 0.25em 0.5em;
+						border-radius: 10px;
 						background-color: @font-swatch7-background-color;
 						color: @font-swatch7-color;
 						letter-spacing: 0.3px;
+						line-height: 1.5em;
 
 						&:hover {
 							text-decoration: none;
